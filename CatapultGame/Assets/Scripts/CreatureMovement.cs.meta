@@ -1,12 +1,9 @@
 fileFormatVersion: 2
-guid: 91d1990535649b341a93a5477a08235f
+guid: f7d2c87bb7185f746ac9b7e14080533a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - center: {instanceID: 0}
-  - idlePosition: {instanceID: 0}
-  - slingshot: {instanceID: 0}
   - creaturePrefab: {fileID: 5279393540295343371, guid: eb3d9f8bf8ca06d47ba3a6dabeea3e59,
       type: 3}
   executionOrder: 0

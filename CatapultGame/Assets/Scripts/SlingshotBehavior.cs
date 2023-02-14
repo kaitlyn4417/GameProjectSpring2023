@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SlingshotBehavior : MonoBehaviour
 {
+	public UnityEvent shootEvent;
+
     public LineRenderer[] lineRenderers;
     public Transform[] stripPositions;
     public Transform center;
@@ -82,9 +85,9 @@ public class SlingshotBehavior : MonoBehaviour
 		Vector3 creatureForce = (currentPosition - center.position) * force * -1;
 		creature.velocity = creatureForce;
 		creature = null;
-		creatureCollider = null;	
-		//add waitForSeconds thing before freezing position
-		//creature.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezePositionX;
+		creatureCollider = null;
+		shootEvent.Invoke();	
+		//creature.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
 		Invoke("InstantiateCreature", 2); 
 	}
 

@@ -216,7 +216,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223868120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: 11, z: -8}
+  m_LocalPosition: {x: -7, y: 11, z: -8}
   m_LocalScale: {x: 0.5, y: 2.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -254,6 +254,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91d1990535649b341a93a5477a08235f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shootEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1855721547}
+        m_TargetAssemblyTypeName: GroundMovementBehavior, Assembly-CSharp
+        m_MethodName: Move
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   lineRenderers:
   - {fileID: 576719917}
   - {fileID: 819506072}
@@ -846,6 +861,7 @@ GameObject:
   - component: {fileID: 1855721545}
   - component: {fileID: 1855721544}
   - component: {fileID: 1855721543}
+  - component: {fileID: 1855721547}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -931,3 +947,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1855721547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855721542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d1e2a1f2d7c4340be1da6e3a3ed72d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  land: {fileID: 1855721542}
+  speed: 5
+  xPos: 0
